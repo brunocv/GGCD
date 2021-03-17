@@ -37,6 +37,15 @@ public class Titles {
     }
 
     public static void main(String args[]) throws Exception{
+
+
+        //Ficheiro CLOUD com informações de criar instâncias para meter o projeto a correr
+        //vídeo 10 a partir dos 9minutos mostra como meter o docker a correr pela google cloud
+        //Depois é só ativar os terminais como o stor explica do docker-machine env nome... e fazer como se estivesse na máquina local
+
+        //ERRO Failed to deploy '<unknown> Dockerfile: Dockerfile': network docker-hadoop_default not found
+        //Perguntar sobre RUN OPTIONS
+
         //EXERCÍCIO 1,2 e 3
         //NOTA: Esta solução tem em conta eu a descomprimir o ficheiro mas não é necessário fazer o gzip desde que mudes o nome do ficheiro na linha do TextInputFormat
         //ou seja, no passo 3 era: curl --output - https://datasets.imdbws.com/title.basics.tsv.gz | hdfs dfs -put - /title.basics.tsv.gz

@@ -1,0 +1,7 @@
+docker-machine create --driver google --google-project snappy-cosine-307915 --google-zone europe-west1-b --google-machine-type n1-standard-4 --google-disk-size=50 dmtest
+
+docker-machine ls
+
+docker-machine env dmtest
+
+eval $(docker-machine env dmtest)

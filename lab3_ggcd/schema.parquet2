@@ -1,0 +1,5 @@
+message Movies {
+    required group genres (LIST) {
+        repeated binary str (UTF8);
+    }
+}

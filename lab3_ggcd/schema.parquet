@@ -1,0 +1,6 @@
+message Movies {
+    required binary tconst (STRING);
+    required group genres (LIST) {
+        repeated binary str (UTF8);
+    }
+}

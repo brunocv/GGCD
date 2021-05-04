@@ -14,7 +14,7 @@ public class Nr_Movies_Actor {
         SparkConf conf = new SparkConf().setMaster("local").setAppName("Number of movies per actor");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        JavaPairRDD<String, Integer> mr = sc.textFile("/home/bruno/Desktop/GGCD/Dados/mini/title.principals.tsv.bz2")
+        JavaPairRDD<String, Integer> mr = sc.textFile("/home/dreamerz/Desktop/GGCD/Dados/mini/title.principals.tsv.bz2")
                 .map(l -> l.split("\t"))
                 .filter(l -> !l[0].equals("tconst"))
                 .filter(l -> !l.equals("\\N"))

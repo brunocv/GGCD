@@ -17,14 +17,14 @@ public class Top3_Movies_Actor {
         SparkConf conf = new SparkConf().setMaster("local").setAppName("Number of movies per actor");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        JavaPairRDD<String, String> mr = sc.textFile("/home/bruno/Desktop/GGCD/Dados/mini/title.principals.tsv.bz2")
+        JavaPairRDD<String, String> mr = sc.textFile("/home/dreamerz/Desktop/GGCD/Dados/mini/title.principals.tsv.bz2")
                 .map(l -> l.split("\t"))
                 .filter(l -> !l[0].equals("tconst"))
                 .filter(l -> !l.equals("\\N"))
                 .filter(l -> l[3].equals("actor") || l[3].equals("actress"))
                 .mapToPair(l -> new Tuple2<>(l[0], l[2]));
 
-        JavaPairRDD<String, String> mr2 = sc.textFile("/home/bruno/Desktop/GGCD/Dados/mini/title.ratings.tsv.bz2")
+        JavaPairRDD<String, String> mr2 = sc.textFile("/home/dreamerz/Desktop/GGCD/Dados/mini/title.ratings.tsv.bz2")
                 .map(l -> l.split("\t"))
                 .filter(l -> !l[0].equals("tconst"))
                 .filter(l -> !l.equals("\\N"))
